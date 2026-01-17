@@ -16,6 +16,7 @@ In large-scale e-commerce operations, raw data alone is insufficient for rapid d
 
 ## Workflow
 The project follows a standard industry data engineering methodology:
+
     - **Identify Grain**: Establishing that each row in the fact table represents one product item within a unique transaction to maintain the highest level of detail (atomic grain).
     - **Extraction**: Loading raw datasets (Users, Products, Sales) into a PySpark environment.
     - **Transformation**:
@@ -33,6 +34,7 @@ The project follows a standard industry data engineering methodology:
 ## Data Modeling (Star Schema)
 
 The resulting warehouse structure consists of:
+
     1. **sales_fact**: Central table storing transaction metrics (Quantity, Price).
     2. **users_dimension**: Descriptive data about the customers.
     3. **products_dimension**: Product details, categories, and pricing.
@@ -44,7 +46,7 @@ The resulting warehouse structure consists of:
 - `Analytical Readiness`: The data in PostgreSQL is fully prepared for connection to visualization tools like Tableau, Power BI, or Looker.
 
 ## Results
-![Data Model](Data Modelling.png)
+![Data Model](Data_Modelling.png)
 
 ## How to Use
 1. Set up a **PostgreSQL** instance.
