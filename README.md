@@ -17,13 +17,13 @@ In large-scale e-commerce operations, raw data alone is insufficient for rapid d
 ## Workflow
 The project follows a standard industry data engineering methodology:
 
-    - **Identify Grain**: Establishing that each row in the fact table represents one product item within a unique transaction to maintain the highest level of detail (atomic grain).
-    - **Extraction**: Loading raw datasets (Users, Products, Sales) into a PySpark environment.
-    - **Transformation**:
-        - **Data Cleansing**: Handling null values and duplicates.
-        - **Dimensional Modeling**: Restructuring data into dimension tables (users, products, date).
-        - **Fact Table Creation**: Building the sales_fact table to link all dimensions with quantitative metrics.
-    - **Loading**: Automating the data transfer to a PostgreSQL database using JDBC connectivity.
+- **Identify Grain**: Establishing that each row in the fact table represents one product item within a unique transaction to maintain the highest level of detail (atomic grain).
+- **Extraction**: Loading raw datasets (Users, Products, Sales) into a PySpark environment.
+- **Transformation**:
+    - **Data Cleansing**: Handling null values and duplicates.
+    - **Dimensional Modeling**: Restructuring data into dimension tables (users, products, date).
+    - **Fact Table Creation**: Building the sales_fact table to link all dimensions with quantitative metrics.
+- **Loading**: Automating the data transfer to a PostgreSQL database using JDBC connectivity.
 
 ## Tech Stack
 - **Processing Engine**: PySpark (Apache Spark)
@@ -35,10 +35,10 @@ The project follows a standard industry data engineering methodology:
 
 The resulting warehouse structure consists of:
 
-    1. **sales_fact**: Central table storing transaction metrics (Quantity, Price).
-    2. **users_dimension**: Descriptive data about the customers.
-    3. **products_dimension**: Product details, categories, and pricing.
-    4. **date_dimension**: Time attributes broken down by Day, Month, Quarter, and Year for trend analysis.
+1. **sales_fact**: Central table storing transaction metrics (Quantity, Price).
+2. **users_dimension**: Descriptive data about the customers.
+3. **products_dimension**: Product details, categories, and pricing.
+4. **date_dimension**: Time attributes broken down by Day, Month, Quarter, and Year for trend analysis.
 
 ## Key Outcomes:
 - `Schema Optimization`: The Star Schema significantly reduces query complexity for business reporting.
